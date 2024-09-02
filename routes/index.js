@@ -1,8 +1,8 @@
 import express from 'express';
 import AppController from '../controllers/AppController';
-import UsersController from '../controllers/UsersController';
-import AuthController from '../controllers/AuthController';
-import FilesController from '../controllers/FilesController';
+//import UsersController from '../controllers/UsersController';
+//import AuthController from '../controllers/AuthController';
+//import FilesController from '../controllers/FilesController';
 
 const router = express.Router();
 
@@ -18,7 +18,7 @@ const routeController = (app) => {
     AppController.getStats(req, res);
   });
 
-  router.post('/users', (req, res) => {
+  /*router.post('/users', (req, res) => {
     UsersController.postNew(req, res);
   });
 
@@ -56,7 +56,7 @@ const routeController = (app) => {
 
   router.post('/files/:id/data', (req, res) => {
     FilesController.getFile(req, res);
-  });
+  });*/
 };
 
 export default routeController;
